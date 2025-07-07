@@ -125,6 +125,11 @@ int main () {
         cout << "MCMXCIV: " << roman_to_int("MCMXCIV") << " (expected: 1994)" << endl;
         cout << "MCDXLIV: " << roman_to_int("MCDXLIV") << " (expected: 1444)" << endl;
     }
+
+    if(true) {
+        vector<string> strs = {"x", "2", "3"};
+        longest_common_prefix(strs);
+    }
     
 
 	return 0;

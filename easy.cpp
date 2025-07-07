@@ -5,6 +5,19 @@
 using namespace std;
 //#include <unordered_map>
 
+/*
+The dictionary doesn't need to include paired combinations - it could also be changed to just 'char'.
+"IV" is equivalent to "V - I"
+AND
+Roman numerals are written largest - smallest, from left to right.
+Therefore, you never have a case of I then C, for example.
+This means you can simply check:
+    if i < i+i {
+        result - dict[i]
+    } else {
+        result + dict[i] 
+    }
+*/
 int roman_to_int(std::string s) {
     int result{0};
     // Maps Roman Numerals to their respective Integer values
@@ -48,4 +61,18 @@ int roman_to_int(std::string s) {
     }
 
     return result;
+}
+
+string longest_common_prefix(std::vector<string>& strs) {
+    // if strs.length == 1 { return "";}
+    // check if any strs[i].length == 0 { return ""; }
+    /*
+    for i in strs {
+        result +=
+        for each string
+            if string[i] == 
+    
+    
+        */
+    return "string";
 }
