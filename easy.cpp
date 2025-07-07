@@ -63,7 +63,7 @@ int roman_to_int(std::string s) {
     return result;
 }
 
-string longest_common_prefix(std::vector<string>& strs) {
+std::string longest_common_prefix(std::vector<string>& strs) {
     // if strs.length == 1 { return "";}
     // check if any strs[i].length == 0 { return ""; }
     /*

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <algorithm>
 #include "easy.h"
 using namespace std;
 
@@ -130,7 +131,8 @@ int main () {
         vector<string> strs = {"x", "2", "3"};
         longest_common_prefix(strs);
     }
-    
+
+    cout << "Program Finish" << endl;
 
 	return 0;
 }
