@@ -10,4 +10,11 @@ int roman_to_int(std::string s);
 
 // URL: https://leetcode.com/problems/longest-common-prefix/
 std::string longest_common_prefix(std::vector<std::string>& strs);
+
+// URL: https://leetcode.com/problems/contains-duplicate/
+bool contains_duplicate(std::vector<int>& nums);
+
+//URL: https://leetcode.com/problems/valid-anagram/
+bool is_anagram(std::string s, std::string t);
+
 #endif

@@ -127,9 +127,45 @@ int main () {
         cout << "MCDXLIV: " << roman_to_int("MCDXLIV") << " (expected: 1444)" << endl;
     }
 
-    if(true) {
+    if(false) {
         vector<string> strs = {"x", "2", "3"};
         longest_common_prefix(strs);
+    }
+
+    if(false) {
+        vector<int> nums;
+        nums = {1, 2, 3, 4, 5, 6};
+        cout << contains_duplicate(nums) << " (expected: 0)" << endl;
+        nums = {1, 3, 2, 1};
+        cout << contains_duplicate(nums) << " (expected: 1)" << endl;
+        nums = {1};
+        cout << contains_duplicate(nums) << " (expected: 0)" << endl;
+        nums = {1, 2, 3, 4, 5, 1};
+        cout << contains_duplicate(nums) << " (expected: 1)" << endl;
+    }
+
+    if(true) {
+        string s = "anagram";
+        string t = "nagaram";
+        cout << "Valid Anagram" << endl;
+        cout << is_anagram(s, t) << " (expected: 1)"<< endl;
+
+        s = "anagram";
+        t = "anagramm";
+        cout << is_anagram(s, t) << " (expected: 0)"<< endl;
+
+        s = "eewa";
+        t = "bbwa";
+        cout << is_anagram(s, t) << " (expected: 0)"<< endl;
+    }
+
+
+    if(false) {
+        // testing purposes
+        string s = "anagram";
+        string t = "anagram";
+        cout << "Sizes {s, t}: " << s.size() << t.size() << endl;
+        cout << "Direct Compare s == t: " << (s == t) << endl;
     }
 
     cout << "Program Finish" << endl;

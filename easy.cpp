@@ -1,7 +1,9 @@
 #include "easy.h"
 #include <iostream>
 #include <map>
+#include <set>
 #include <unordered_set>
+#include <algorithm>
 using namespace std;
 //#include <unordered_map>
 
@@ -75,4 +77,32 @@ std::string longest_common_prefix(std::vector<string>& strs) {
     
         */
     return "string";
+}
+
+bool contains_duplicate(std::vector<int>& nums) {
+    if(nums.size() == 1) {
+        return false;
+    }
+    // Create a set from nums, holding only unique elements in order
+    set<int> nums_set(nums.begin(), nums.end());
+    // If the set contains fewer elements, there must be duplicates
+    if (nums.size() > nums_set.size()) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+bool is_anagram(std::string s, std::string t) {
+    if (s.size() != t.size()) {
+        return false;
+    }
+    sort(s.begin(), s.end());
+    sort(t.begin(), t.end());
+    if (s != t) {
+        return false;
+    }
+    return true;
+
+
 }
