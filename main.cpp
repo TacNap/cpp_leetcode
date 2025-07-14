@@ -73,6 +73,14 @@ int getInput()
     return input;
 }
 
+void print_vector(vector<int> input_vector) {
+    cout << "VECTOR OUTPUT: ";
+    for (int element : input_vector) {
+        cout << element << " ";
+    }
+    cout << endl;
+}
+
 int main () {
 
 	/********************************************************************/
@@ -144,7 +152,7 @@ int main () {
         cout << contains_duplicate(nums) << " (expected: 1)" << endl;
     }
 
-    if(true) {
+    if(false) {
         string s = "anagram";
         string t = "nagaram";
         cout << "Valid Anagram" << endl;
@@ -159,14 +167,43 @@ int main () {
         cout << is_anagram(s, t) << " (expected: 0)"<< endl;
     }
 
+    if(true) {
+        vector<int> nums {2, 7, 11, 15};
+        int target = 9;
+        vector<int> output = two_sum(nums, target);
+        cout << "(expected: [7, 2])" << endl;
+        print_vector(output);
+
+        nums = {3, 2, 4};
+        target = 6;
+        output = two_sum(nums, target);
+        cout << "(expected: [4, 2])" << endl;
+        print_vector(output);
+
+        nums = {3, 3};
+        target = 6;
+        output = two_sum(nums, target);
+        cout << "(expected: [3, 3])" << endl;
+        print_vector(output);
+
+        nums = {5, -1, 6, -7};
+        target = -8;
+        output = two_sum(nums, target);
+        cout << "(expected: [-1, -7])" << endl;
+        print_vector(output);
+
+    }
 
     if(false) {
-        // testing purposes
-        string s = "anagram";
-        string t = "anagram";
-        cout << "Sizes {s, t}: " << s.size() << t.size() << endl;
-        cout << "Direct Compare s == t: " << (s == t) << endl;
+        vector<int> test_vector {1, 1, 4, 2, 1};
+        sort(test_vector.begin(), test_vector.end());
+        print_vector(test_vector);
+        test_vector = {1, 1, 4, 2, 1};
+        sort(test_vector.end(), test_vector.begin());
+        print_vector(test_vector);
     }
+
+    
 
     cout << "Program Finish" << endl;
 

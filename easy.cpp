@@ -4,6 +4,8 @@
 #include <set>
 #include <unordered_set>
 #include <algorithm>
+#include <vector>
+#include <array>
 using namespace std;
 //#include <unordered_map>
 
@@ -103,6 +105,43 @@ bool is_anagram(std::string s, std::string t) {
         return false;
     }
     return true;
+
+
+}
+/*
+This approach doesn't actually work.
+To implement a method that only iterates once, you'd need hash-maps.
+Will finish this another time. 
+*/
+std::vector<int> two_sum(std::vector<int>& nums, int target) {
+    // Declare the return array 
+    vector<int> output;
+    bool debug = true;
+    
+    // Sort the array in-place
+    sort(nums.begin(), nums.end());
+
+    // Iterate through the vector backwards
+    for(int i = nums.size()-1; i >= 0; i--) {
+        if (debug) {
+            cout << "----\ni: " << i << endl;
+            cout << "nums[i]: " << nums[i] << endl;
+            cout << "target: " << target << endl;
+            cout << "----" << endl;
+        }
+        
+        if (nums[i] <= target) {
+            output.push_back(nums[i]);
+            target -= nums[i];
+        }
+    }
+    return output;
+
+    /* Psuedo for O(n^2) implementation
+    // double nested [i, j] loop
+    // if i + j == target, output.push_back{i, j}
+    // return output
+    */
 
 
 }
