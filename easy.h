@@ -20,4 +20,6 @@ bool is_anagram(std::string s, std::string t);
 // URL: https://leetcode.com/problems/two-sum/
 std::vector<int> two_sum(std::vector<int>& nums, int target);
 
+// URL: https://leetcode.com/problems/valid-palindrome/description/
+bool isPalindrome(string s);
 #endif

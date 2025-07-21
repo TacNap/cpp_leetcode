@@ -167,7 +167,7 @@ int main () {
         cout << is_anagram(s, t) << " (expected: 0)"<< endl;
     }
 
-    if(true) {
+    if(false) {
         vector<int> nums {2, 7, 11, 15};
         int target = 9;
         vector<int> output = two_sum(nums, target);
@@ -203,7 +203,9 @@ int main () {
         print_vector(test_vector);
     }
 
-    
+    #if 1
+
+    #endif
 
     cout << "Program Finish" << endl;
 

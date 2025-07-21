@@ -145,3 +145,10 @@ std::vector<int> two_sum(std::vector<int>& nums, int target) {
 
 
 }
+
+
+bool isPalindrome(string s) {
+    // iterate through the string - or use some function - to conver to lowercase and remove non-alphanumeric chars
+    // iterate through the sting with a pointer at front AND back
+    // if pointers differ, return false
+}
